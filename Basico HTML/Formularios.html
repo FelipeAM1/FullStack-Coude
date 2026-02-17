@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulário para inscrição no Workshop</h1>
+    <p>Preencha os campos a seguir com seus dados:</p>
+
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label for="Nome">Nome Completo:</label>
+            <input id="Nome" type="text" name="Nome" placeholder="Seu nome completo" required> <br>
+
+            <label for="Email">Email:</label>
+            <input id="Email" type="email" name="email" placeholder="Seu Email" required> <br>
+
+            <label for="Telefone">Seu Número:</label>
+            <input id="Telefone" type="tel" name="Telefone" pattern="[0-9]{10,11}" placeholder="75 99999-9999"> <br>
+
+            <label for="nascimento">Data de Nascimento:</label>
+            <input id="nascimento" type="date" name="nascimento" max="2008-02-17" required> <br>
+
+            <label for="area">Área de interesse:</label>
+            <select name="area" id="area">
+                <option value="">Selecione uma opção</option>
+                <option value="frontend">FrontEnd</option>
+                <option value="backend">BackEnd</option>
+                <option value="fullstack">FullStack</option>
+            </select> <br>
+            <label for="mensagem">Me fale um pouco sobre você e o seu interesse:</label>
+            <textarea name="mensagem" id="mensagem" placeholder="Digete aqui..." maxlength="500" required></textarea>
+        </fieldset>
+
+        <p>Informe se já possui algum conhecimento nas seguintes linguagens:</p>
+            <input type="checkbox" name="Linguagem" value="html"> HTML <br>
+            <input type="checkbox" name="Linguagem" value="css"> CSS <br>
+            <input type="checkbox" name="Linguagem" value="js"> Java Script <br>
+
+        <p>Informe qual horário pretende comparecer:</p>
+            <input type="radio" name="turno" value="manha"> Manhã
+            <input type="radio" name="turno" value="tarde"> Tarde
+            <input type="radio" name="turno" value="noite"> Noite
+
+    </form>
+</body>
+</html>
