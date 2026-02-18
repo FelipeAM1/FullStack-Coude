@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+ 
 </head>
 <body>
     <h1>Formulário para inscrição no Workshop</h1>
@@ -13,39 +14,67 @@
         <fieldset>
             <legend>Dados Pessoais</legend>
 
-            <label for="Nome">Nome Completo:</label>
+            <label for="Nome">Nome Completo:</label> 
             <input id="Nome" type="text" name="Nome" placeholder="Seu nome completo" required> <br>
-
+<br>
             <label for="Email">Email:</label>
             <input id="Email" type="email" name="email" placeholder="Seu Email" required> <br>
-
+<br>
             <label for="Telefone">Seu Número:</label>
             <input id="Telefone" type="tel" name="Telefone" pattern="[0-9]{10,11}" placeholder="75 99999-9999"> <br>
-
+<br>
             <label for="nascimento">Data de Nascimento:</label>
             <input id="nascimento" type="date" name="nascimento" max="2008-02-17" required> <br>
-
-            <label for="area">Área de interesse:</label>
+<br>
+            <label for="area">Área de interesse:</label> 
             <select name="area" id="area">
                 <option value="">Selecione uma opção</option>
                 <option value="frontend">FrontEnd</option>
                 <option value="backend">BackEnd</option>
-                <option value="fullstack">FullStack</option>
-            </select> <br>
-            <label for="mensagem">Me fale um pouco sobre você e o seu interesse:</label>
-            <textarea name="mensagem" id="mensagem" placeholder="Digete aqui..." maxlength="500" required></textarea>
+                <option value="fullstack">FullStack</option> 
+            </select> 
+           
+            <br> <br> <label for="linguagem_fav">Informe suas linguagens favoritas:</label> 
+              <input id="linguagem_fav" type="text" name="linguagem_fav" list="lista_linguagens" placeholder="Suas linguagens" required>
+             
+              <datalist id="lista_linguagens">
+                <option value="HTML">
+                <option value="CSS">
+                <option value="JavaScript">
+                <option value="Python">
+                <option value="Java">
+                <option value="C#">  
+              </datalist>
+              
+              
+         <br> <br>  <label for="mensagem">Me fale um pouco sobre você e o seu interesse:</label> <br>
+            <textarea name="mensagem" id="mensagem" placeholder="Digite aqui..." maxlength="500" required></textarea>
+        
         </fieldset>
 
         <p>Informe se já possui algum conhecimento nas seguintes linguagens:</p>
-            <input type="checkbox" name="Linguagem" value="html"> HTML <br>
-            <input type="checkbox" name="Linguagem" value="css"> CSS <br>
-            <input type="checkbox" name="Linguagem" value="js"> Java Script <br>
+            <input type="checkbox" id="html" name="Linguagem" value="html">
+            <label for="html">HTML</label> <br>
+      
+            <input type="checkbox" id="css" name="Linguagem" value="css">
+            <label for="css">CSS</label> <br>
+      
+            <input type="checkbox" id="js" name="Linguagem" value="js">
+            <label for="js">Java Script</label>
 
         <p>Informe qual horário pretende comparecer:</p>
-            <input type="radio" name="turno" value="manha"> Manhã
-            <input type="radio" name="turno" value="tarde"> Tarde
-            <input type="radio" name="turno" value="noite"> Noite
-
+            <input type="radio" id="manha" name="turno" value="manha"> 
+            <label for="manha">Manhã</label> <br>
+      
+            <input type="radio" id="tarde" name="turno" value="tarde"> 
+            <label for="tarde">Tarde</label> <br>
+      
+            <input type="radio" id="noite" name="turno" value="noite"> 
+            <label for="noite">Noite</label>
+      <br><br>
+      
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpar</button>
     </form>
 </body>
 </html>
